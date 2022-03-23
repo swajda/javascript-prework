@@ -13,8 +13,8 @@ function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
 
-  var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
-
+  var argMoveId, argPlayerMove, playerScore, computerScore, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+  
 
   function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
@@ -30,27 +30,41 @@ function buttonClicked(argButtonName) {
     }
   }
   
-  function displayResult(argPlayerMove, argComputerMove) {
+  function displayResult(argPlayerMove, argComputerMove, ) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-    if (argPlayerMove == 'nożyce' && argComputerMove == 'papier' && argComputerMove == 'kamień') {
+    if (argPlayerMove == 'nożyce' && argComputerMove == 'papier' ) {
       printMessage('Wygrywasz!');
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
       printMessage('Wygrywasz!');
-    } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
+    } else if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
     } else if (argPlayerMove == argComputerMove) {
       printMessage('Remis');
     } else {
-      printMessage('Przegrywasz :(');
+      printMessage('Przegrywasz :(')
+      ;
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+    
   }
+
+  function displayScore(displayResult, playerScore = 0, computerScore = 0  ) {
+    
+    if (displayResult == 'Wygrywasz!') {
+      printMessage('jajo')
+    }
+    printMessage('Wynik: Gracz - ' + (playerScore) + ' komputer - ' + computerScore);
+  }
+
+  
   playerMove = argButtonName;
   randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('wylosowana liczba to: ' + randomNumber);
   computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
   displayResult(playerMove, computerMove);
+  displayScore(displayResult, playerScore, computerScore);
+  
 }
 
 
