@@ -1,3 +1,33 @@
+body {
+  background-color: chocolate;
+  font-size: larger;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container div {
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+#buttons button {
+  padding: 5px 25px;
+  border: black dotted 2px;
+  background-color: #fff;
+  border-radius: 25%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#buttons button:hover {
+  background-color: burlywood;
+  transform: scale(1.2);
+  border-style: groove;
+  border-color: red;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDJCQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0FDQ0o7QURBSTtFQUNJLGNBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7QUNFUjs7QURHQTtFQUNJLGlCQUFBO0VBQ0Esd0JBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLGVBQUE7QUNBSjs7QURJQTtFQUNJLDJCQUFBO0VBRUEscUJBQUE7RUFDQSxvQkFBQTtFQUNBLGlCQUFBO0FDRkoiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
