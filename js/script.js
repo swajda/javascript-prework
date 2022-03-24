@@ -1,7 +1,6 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
+let argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
 
 buttonTest = document.getElementById('button-test');
-
 buttonPaper = document.getElementById('button-paper');
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
 buttonRock = document.getElementById('button-rock');
@@ -13,7 +12,7 @@ function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
 
-  var argMoveId, argPlayerMove, playerScore, computerScore, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+  let argMoveId, argPlayerMove, playerScore, computerScore, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
   
 
   function getMoveName(argMoveId) {
